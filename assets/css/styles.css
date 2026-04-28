@@ -3672,3 +3672,29 @@ body > footer {
     line-height: 1.4;
   }
 }
+/* Position reviews at the midpoint between service buttons and copyright link */
+.page-home .hero-center > .home-reviews {
+  margin-top: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 92px;
+  transform: translateX(-50%);
+  width: min(1100px, calc(100% - 48px));
+  z-index: 5;
+}
+
+.page-home .hero-overlay {
+  position: relative;
+}
+
+/* Keep mobile stacked and readable */
+@media (max-width: 768px) {
+  .page-home .hero-center > .home-reviews {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    margin-top: 42px;
+  }
+}
